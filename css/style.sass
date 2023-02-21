@@ -1,0 +1,381 @@
+$neutral-gray: #BFBFBF
+$neutral-gray-violet: #422783
+$neutral-very-blue: #35323E
+$neutral-very-violet: #232127
+$primary-violet: #3B3054
+$primary-cyan: #2ACFCF
+$secondary-red: #F46262
+$white: #FFFFFF
+
+.container-shorten
+    background-color: #f0f1f6
+    min-height: 200px
+    position: relative
+    padding-top: 128px
+    padding-bottom: 128px
+    width: 100%
+
+.shorten
+    background-color: $primary-violet
+    background-image: url('./../images/bg-shorten-mobile.svg')
+    background-position: top right
+    background-repeat: no-repeat
+    border-radius: 6px
+    min-height: 112px
+    padding: 16px
+    position: absolute
+    top: -64px
+    width: calc(100% - 48px)
+    @media only screen and (min-width : 767px)
+        background-image: url('./../images/bg-shorten-desktop.svg')
+        min-height: 48px
+        padding: 32px
+        width: calc(100% - 48px)
+    @media only screen and (min-width : 1000px)
+        width: 1000px
+    
+
+form
+    width: 100%
+
+.container-form
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: 48px 48px
+    height: 100%
+    row-gap: 24px
+    width: 100%
+    @media only screen and (min-width : 767px)
+        column-gap: 16px
+        grid-template-columns: 1fr 136px
+        grid-template-rows: 48px
+
+
+.url
+    &-label
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        position: relative
+        visibility: hidden
+        z-index: -1
+        @media only screen and (min-width : 767px)
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+
+
+    &-input
+        border: none
+        border-radius: 8px
+        font-size: 18px
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        height: 100%
+        outline: none
+        padding-left: 16px
+        width: 100%
+         transition: 0.5s
+        &-active
+            border: 2px solid red
+        @media only screen and (min-width : 767px)
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+    
+    &-message
+        bottom: 64px
+        color: red
+        font-size: 16px
+        position: absolute
+        display: none
+        transition: 0.5s
+        @media only screen and (min-width : 767px)
+            bottom: 8px
+        &.active
+            display: block
+
+    &-button
+        align-items: center
+        background-color: $primary-cyan
+        border: none
+        border-radius: 8px
+        color: $white
+        cursor: pointer
+        display: flex
+        font-weight: 700
+        font-size: 16px
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        height: 100%
+        justify-content: center
+        padding: 8px 24px
+        width: 100%
+        transition: 0.5s
+        @media only screen and (min-width : 767px)
+            grid-column: 2 / 3
+            grid-row: 1 / 2
+        &:hover
+            background-color: #7fe2e2
+    
+.advanced
+    aling-items: center
+    display: flex
+    flex-direction: column
+    padding: 40px 0
+    text-align: center
+
+    h2
+        color: $neutral-very-violet
+        font-size: 32px
+    p
+        color: $neutral-gray
+        max-width: 304px
+        @media only screen and (min-width : 480px)
+            max-width: 400px
+
+.container-items
+    display: grid
+    height: auto
+    grid-template-columns: auto
+    grid-template-rows: auto 104px auto 104px auto
+    padding: 80px 0
+    width: calc(100% - 48px)
+    @media only screen and (min-width : 1000px)
+        height: 424px
+        grid-template-columns: auto 1fr auto 1fr auto
+        grid-template-rows: auto
+        padding: 80px 0 0 0
+        width: 1000px
+
+.item-box
+    background-color: $white
+    min-height: auto
+    padding: 72px 24px 24px 24px
+    position: relative
+    text-align: center
+    width: 100%
+    @media only screen and (min-width : 1000px)
+        width: 300px
+
+    &__icon
+        aling-items: center 
+        height: 80px
+        background-color: $primary-violet
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        position: absolute
+        right: calc(50% - 40px)
+        top: -40px
+        width: 80px
+        @media only screen and (min-width : 1000px)
+            right: calc(76% - 40px)
+
+        img
+            object-fit: scale-down
+
+    &__text
+        color: $neutral-gray
+    
+    &__title
+        font-size: 24px
+
+.item-line
+    background-color: $primary-cyan
+    height: 100%
+    left: calc(50% - 4px)
+    position: relative
+    width: 8px
+    @media only screen and (min-width : 1000px)
+        bottom: 40px
+        height: 8px
+        left: 0
+        position: relative
+        width: 100%
+
+.item-box:nth-of-type(1)
+    align-self: start
+
+.item-box:nth-of-type(3)
+    align-self: end
+
+.boost
+    align-items: center
+    background-color: $primary-violet
+    background-image: url('./../images/bg-boost-mobile.svg')
+    background-position: top right
+    background-size: contain
+    background-repeat: no-repeat
+    display: flex
+    flex-direction: column
+    padding: 48px
+    @media only screen and (min-width : 767px)
+        background-image: url('./../images/bg-boost-desktop.svg')
+
+    h2
+        color: $white
+        text-align: center
+
+    button
+        background-color: $primary-cyan
+        border: none
+        border-radius: 32px
+        color: $white
+        cursor: pointer
+        font-weight: 700
+        font-size: 16px
+        padding: 8px 24px
+        transition: 0.5s
+    button:hover
+        background-color: #7fe2e2
+     
+        
+.footer
+    background-color: $neutral-very-violet
+    display: flex
+    height: auto
+    justify-content: center
+    width: 100%
+
+    .container-footer
+        align-items: center
+        display: grid
+        grid-row-gap: 24px
+        grid-template-columns: auto
+        grid-template-rows: auto auto auto auto auto
+        padding: 24px 0
+        width: calc(100% - 48px)
+        @media only screen and (min-width : 767px)
+            align-items: start
+            grid-template-columns: auto auto auto auto auto
+            grid-template-rows: auto
+        @media only screen and (min-width : 1000px)
+            width: 1000px
+
+        h4
+            color: $white
+            text-align: center
+            font-size: 32px
+            padding: 24px 0
+            @media only screen and (min-width : 767px)
+                text-align: left
+            
+        h5
+            color: $white
+            font-size: 20px
+            text-align: center
+            @media only screen and (min-width : 767px)
+                text-align: left
+
+    &-about
+        padding: 16px 0
+        
+        ul
+            align-items: center
+            display: flex
+            flex-direction: column
+            @media only screen and (min-width : 767px)
+                align-items: flex-start
+           
+            li 
+                height: auto
+                padding: 8px 0
+                a
+                    color: $neutral-gray
+                    font-size: 16px
+                    font-weight: 500
+                    text-decoration: none
+                    transition: 0.5s
+                a:hover
+                    color: #2ACFCF
+
+    
+
+    &-network 
+        padding: 16px 0
+        width: 100%
+        @media only screen and (min-width : 767px)
+            padding: 24px 0 0 0
+
+        ul
+            align-items: center
+            display: flex
+            justify-content: center
+            width: 100%
+            @media only screen and (min-width : 767px)
+                justify-content: flex-end
+
+            li
+                padding: 0 8px
+
+                a
+                    cursor: pointer
+                
+
+.container-links
+    display: flex
+    flex-direction: column-reverse
+    width: calc(100% - 48px)
+    @media only screen and (min-width : 767px)
+        width: calc(100% - 48px)
+    @media only screen and (min-width : 1000px)
+        width: 1000px
+
+.link
+    background-color: $white
+    border-radius: 4px
+    display: flex
+    flex-direction: column
+    margin-bottom: 24px
+    padding: 0 0 16px 0
+    width: 100%
+    @media only screen and (min-width : 767px)
+        align-items: center
+        flex-direction: row
+        justify-content: center
+        padding: 16px
+
+    &-user
+        border-bottom: 1px solid $neutral-very-blue
+        overflow: hidden
+        padding: 16px
+        text-overflow: ellipsis
+        white-space: nowrap
+        @media only screen and (min-width : 767px)
+            border-bottom: none
+            padding: 0
+            width: 320px
+    
+    &-short
+        color: $primary-cyan
+        border: none
+        outline: none
+        padding: 16px
+        @media only screen and (min-width : 767px)
+            
+            flex-grow: 1
+            padding: 0 24px
+            text-align: right
+        &___input
+            opacity: 0
+            position: absolute
+    
+    &-copy
+        background-color: $primary-cyan
+        border: none
+        border-radius: 4px
+        color: $white
+        cursor: pointer
+        font-weight: 700
+        font-size: 16px
+        margin: 0 auto
+        padding: 8px 24px
+        transition: 0.5s
+        width: calc(100% - 32px)
+        &:hover
+            background-color: #7fe2e2
+        @media only screen and (min-width : 767px)
+            padding: 8px 0
+            width: 156px
+        &.active
+            background-color: $neutral-gray-violet
+
+        
