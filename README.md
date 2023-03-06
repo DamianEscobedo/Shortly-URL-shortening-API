@@ -41,7 +41,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ### Links
 
-- Live Site URL: [https://damianescobedo.github.io/Shortly-URL-shortening-API/dist/]()
+- Live Site URL: [https://damianescobedo.github.io/Shortly-URL-shortening-API/dist/ ]()
 
 
 ## My process
